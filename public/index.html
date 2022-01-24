@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
+  <meta charset="UTF-8"/>
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#000000"/>
   <meta
           name="description"
           content="Web site created using create-react-app"
   />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png"/>
   <link
           rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
@@ -21,65 +21,19 @@
           rel="stylesheet"
   />
 
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
 
   <title>TodoList</title>
   <link
           href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
           rel="stylesheet"
   />
-  <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
-          integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
-          crossorigin="anonymous"
-  />
-
-  <link rel="stylesheet" href="./src/App.css" type="text/css"/>
-  <link rel="stylesheet" href="./src/components/Navbar.css"/>
 
 </head>
-<body onload ="showTime(); Calendar();">
-<header>
-  <div id="topbar">
-  <div class="logo"><h1>ToDo Lista </h1></div>
-    <span class="calendar-icon"><i class="fas fa-calendar-alt"></i></span>
-  <div id="Calendar"></div>
-    <span class="clock-icon"><i class="fas fa-clock"></i></span>
-  <div id ="zegar"></div>
-  </div>
-</header>
-<section class="todo_list_container">
-<main>
-<form>
-  <label>
-    <input type="text" class="todo-input" />
-  </label>
-  <button class="todo-button" type="submit">
-    <i class="fas fa-plus-square"></i>
-  </button>
-  <div class="select">
-    <label>
-      <select name="todos" class="filter-todo">
-        <option value="all">All</option>
-        <option value="completed">Completed</option>
-        <option value="uncompleted">Uncompleted</option>
-      </select>
-    </label>
-  </div>
-</form>
-<div class="todo-container">
-  <ul class="todo-list"></ul>
+<body>
+<div id="root">
+
 </div>
 
-</main>
-</section>
-<script src="./src/App.js" type="text/javascript"></script>
-<script src="./js/Zegar.js"></script>
-<script src="./js/Calendar.js"></script>
-<script></script>
 </body>
-<footer>
-  <p>Praca Jana Mikuslkiego&copy2022</p>
-</footer>
 </html>

@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -16,12 +15,11 @@ header {
   font-size: 2rem;
   background-image: linear-gradient(to right top, #4775af, #123448, #103d42, #07251a, #a8eb12);
   color:white;
-  min-height: 8.5vh;
+  min-height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 
 form {
   min-height: 20vh;
@@ -133,7 +131,7 @@ form button:hover {
   background: rgb(11, 212, 162);
 }
 .todo-item {
-  padding: 0 0.5rem;
+  padding: 0rem 0.5rem;
 }
 
 .fa-trash,
@@ -186,21 +184,3 @@ select {
   cursor: pointer;
   pointer-events: none;
 }
-footer{
-  background-image: linear-gradient(to right top, #4775af, #123448, #103d42, #07251a, #a8eb12);
-  height: 8.5vh;
-  width:100vw;
-}
-footer p{
-  padding: 15px;
-  display:flex;
-  justify-content: center;
-  align-content: center;
-}
-
-/* Transition */
-/*
-.select:hover::after {
-  transform: scale(1.5);
-}
-*/

@@ -1,46 +1,52 @@
 import React from 'react';
-const Form = ({setInputText,todos,setTodos,inputText,setStatus}) => {
-    //javascript code
-    const inputTextHandler = (e) => {
-        setInputText(e.target.value);
-    };
-    const submitTodoHandler = (e) => {
-        e.preventDefault();
-        setTodos([
-            ...todos,
-            {text:inputText,complete:false, id:Math.random()*1000},
-        ]);
-        setInputText("");
+
+class Form extends React.Component {
+    render() {
+        let {setInputText, todos, setTodos, inputText, setStatus} = this.props;
+        //javascript code
+        const inputTextHandler = (e) => {
+            setInputText(e.target.value);
+        };
+        const submitTodoHandler = (e) => {
+            e.preventDefault();
+            setTodos([
+                ...todos,
+                {text: inputText, complete: false, id: Math.random() * 1000},
+            ]);
+            setInputText("");
+        }
+
+        const statusHandler = (e) => {
+            console.log(e.target.value);
+        };
+
+        return (
+            <form>
+                <input
+                    value={inputText}
+                    onChange={inputTextHandler}
+                    type="text"
+                    className="todo-input"
+                />
+                <button
+                    onClick={submitTodoHandler}
+                    className="todo-button"
+                    type="submit"
+                >
+                    <i className="fas fa-plus-square"/>
+                </button>
+                <div className="select">
+                    <seclect onChange={statusHandler} name="todos" className="filter-todo">
+                        <option value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="uncompleted">Uncompleted</option>
+                    </seclect>
+                </div>
+            </form>
+        );
+
+
     }
+}
 
-    const statusHandler = (e) => {
-        console.log(e.target.value);
-    };
-
-    return(
-        <form>
-            <input
-                   value={inputText}
-                   onChange={inputTextHandler}
-                   type="text"
-                   className="todo-input"
-            />
-            <button
-                onClick={submitTodoHandler}
-                className="todo-button"
-                type="submit"
-            >
-            <i className="fas fa-plus-square"/>
-            </button>
-            <div className="select">
-                <seclect onChange={statusHandler} name="todos" className="filter-todo">
-                    <option value="all">All</option>
-                    <option value="completed">Completed</option>
-                    <option value="uncompleted">Uncompleted</option>
-                </seclect>
-            </div>
-        </form>
-    );
-
-};
 export default Form;
