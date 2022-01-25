@@ -7,6 +7,7 @@ import todo from "./components/Todo";
 
 
 
+
 function App() {
 
     const [inputText, setInputText] = useState("");
@@ -23,7 +24,7 @@ function App() {
     useEffect(() => {
         filterHandler();
         saveLocalTodos();
-    }, [todo, status]);
+    }, [todos, status]);
 
     const filterHandler = () => {
         switch (status) {
@@ -40,15 +41,13 @@ function App() {
     };
 
     const saveLocalTodos = () => {
-        if (localStorage.getItem('todos') === null) {
             localStorage.setItem('todos', JSON.stringify(todos));
-        }
     };
     const getLocalTodos = () => {
         if (localStorage.getItem('todos') === null) {
-            localStorage.setItem('todos', JSON.stringify([]));
+            localStorage.setItem("todos", JSON.stringify([]));
         } else {
-            let todoLocal = JSON.parse(localStorage.getItem('todos'));
+            let todoLocal = JSON.parse(localStorage.getItem("todos"));
             setTodos(todoLocal);
         }
     };
@@ -57,7 +56,6 @@ function App() {
         <div className="App">
             <header>
                 <h1>ToDo List</h1>
-
             </header>
             <Form
                 inputText={inputText}
