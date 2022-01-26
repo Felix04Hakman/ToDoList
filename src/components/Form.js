@@ -17,7 +17,7 @@ class Form extends React.Component {
         }
 
         const statusHandler = (e) => {
-            console.log(e.target.value);
+            setStatus(e.target.value);
         };
 
         return (
