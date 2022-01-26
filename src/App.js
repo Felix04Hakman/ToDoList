@@ -5,16 +5,12 @@ import Form from "./components/Form";
 import ToDoList from "./components/ToDoList";
 import todo from "./components/Todo";
 
-
-
-
 function App() {
 
     const [inputText, setInputText] = useState("");
     const [todos, setTodos] = useState([]);
     const [status, setStatus] = useState('all');
     const [filteredTodos, setFilteredTodos] = useState([]);
-
 
 
     useEffect(() => {
