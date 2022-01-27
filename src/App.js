@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import './App.css';
+import './sass/main.scss';
 //Import components
 import Form from "./components/Form";
 import ToDoList from "./components/ToDoList";
